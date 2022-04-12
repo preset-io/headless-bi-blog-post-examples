@@ -1,4 +1,4 @@
-slice_name: Count per country
+slice_name: Count of something per country
 viz_type: pie
 params:
   adhoc_filters: []
