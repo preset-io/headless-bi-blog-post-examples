@@ -1,0 +1,29 @@
+slice_name: Count per country
+viz_type: pie
+params:
+  adhoc_filters: []
+  color_scheme: supersetColors
+  datasource: 21__table
+  date_format: smart_date
+  extra_form_data: {}
+  groupby:
+  - country
+  innerRadius: 30
+  label_type: key
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 70
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  slice_id: 79
+  sort_by_metric: true
+  time_range: No filter
+  viz_type: pie
+cache_timeout: null
+uuid: 3f966611-8afc-4841-abdc-fa4361ff69f8
+version: 1.0.0
+dataset_uuid: fe3bd066-ab04-4ab8-a89a-30bf3d8423b4
