@@ -1,0 +1,42 @@
+name: 'Publish resources to Preset workspace'
+
+env:
+  WORKSPACE: https://49437123.us1a.app.preset.io/
+  
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  publish:
+    name: 'Publish resources'
+    runs-on: ubuntu-latest
+    environment: production
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: 'Checkout CLI'
+      uses: actions/checkout@v3
+      with:
+        repository: preset-io/backend-sdk
+        path: preset-cli
+
+    - name: 'Install CLI'
+      run: |
+        cd preset-cli
+        pip install .
+        cd ..
+        
+    - name: 'Publish resources'
+      env:
+        PRESET_API_TOKEN: ${{ secrets.PRESET_API_TOKEN }}
+        PRESET_API_SECRET: ${{ secrets.PRESET_API_SECRET }}
+      run: preset-cli --workspace=${WORKSPACE} superset sync native . --disallow-edits --overwrite
