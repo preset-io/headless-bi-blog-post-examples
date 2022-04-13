@@ -1,7 +1,7 @@
 name: 'Publish resources to Preset workspace'
 
 env:
-  WORKSPACE: https://49437123.us1a.app.preset.io/
+  WORKSPACE: ${{ secrets.WORKSPACE }}
   
 on:
   push:
