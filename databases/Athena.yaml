@@ -1,0 +1,15 @@
+database_name: Athena
+sqlalchemy_uri: "{{ functions.database.get_sqlalchemy_uri(filepath) }}"
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_csv_upload: false
+extra:
+  metadata_params: {}
+  engine_params: {}
+  metadata_cache_timeout: {}
+  schemas_allowed_for_csv_upload: []
+uuid: 3a3ca4a7-6bef-41eb-853f-2bb6923912ea
+version: 1.0.0
