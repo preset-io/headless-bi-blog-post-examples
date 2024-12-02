@@ -1,5 +1,5 @@
 database_name: Athena
-sqlalchemy_uri: "{{ functions.database.get_sqlalchemy_uri(filepath) }}"
+sqlalchemy_uri: "{{ functions.database.get_sqlalchemy_uri() }}"
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false
